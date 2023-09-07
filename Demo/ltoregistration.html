@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="ltoregistration.css">
+    <title>LTO Registration</title>
+    <body>
+        <section class="background">
+        <div class="header">
+            <H1>REPUBLIC OF THE PHILIPPINES<br>
+            DEPARTMENT OF TRANSPORTATION AND COMMUNICATION<br>
+            LAND TRANSPORTATION OFFICE</H1>
+            <p id="qc">East Avenue, Quezon City</p>
+        </div>
+
+        <section class="form">
+            <form id="ltoregistration" method="post" class="formregistration">
+      
+                <div class="instructions">
+                <h3>INTSTRUCTIONS</h3>
+                <p>1. ACCOMPLISH THE FORM CORRECTLY</p>
+                <p>2. PRINT DATA LEGIBLY IN CAPITAL LETTERS</p>
+                <p>3. SUBMIT THIS FORM TO THE CSR/EVALUATOR TOGETHER WITH THE REQUIRED SUPPORTING DOCUMENTS</p>
+                <h3>APPLICATION FOR DRIVER'S LICENSE</h3>
+                </div>
+                
+                
+                <div class="container">
+                    <div class="row">
+                        <div>
+                            <label for="Lastname">LASTNAME</label><br>
+                            <input type="text" id="Lastname" name="Lastname" placeholder="Lastname" required>
+                        </div>
+                        <div>
+                            <label for="Firstname">FIRSTNAME</label><br>
+                            <input type="text" id="Firstname" name="Firstname"placeholder="Firstname" required>
+                        </div>
+                        <div>
+                            <label for="Middlename">MIDDLENAME</label><br>
+                            <input type="text" id="Middlename" name="Middlename" placeholder="Middlename" required>
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <div>
+                            <label for="Street">STREET</label><br>
+                            <input type="text" id="Street" name="Street" placeholder="Street" required><br>
+                        </div>
+                        <div>
+
+
+                            
+                            <span>SELECT A PROVINCE</span><br>
+                            <select id="province-dropdown" onchange="showPlacesDropdown()">
+                                    <option value="">Select a Region</option>
+                                    <option value="NCR">METRO-MANILA</option>
+                                    <option value="CAVITE">CAVITE</option>
+                                    <option value="LAGUNA">LAGUNA</option>
+                                    <option value="BATANGAS">BATANGAS</option>
+                                    <option value="RIZAL">RIZAL</option>
+                                    <option value="QUEZON">QUEZON</option>
+                        
+                            </select>
+                        </div>
+                        <div>
+                            <span>SELECT A CITY</span><br>
+                            <div id="city-dropdown">
+                                <select id="place-select">
+                                    <option value="">SELECT A</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                
+                    <div class="row">
+                        <div>
+                            <label for="Cont">TEL NO. / CP NO.:</label> <br>
+                            <input type="tel" id="Cont" name="Cont" placeholder="Enter Contact" required>
+                        </div>
+                        <div>
+                            <label for="Tin">TIN:</label> <br>
+                            <input type="tin" id="Tin" name="Tin" placeholder="TIN" required>
+                        </div>
+                        <div>
+                            <label for="Nationality">NATIONALITY</label><br>
+                            <input type="text" id="Nationality" name="Nationality" placeholder="Nationality" required><br>
+                        </div>
+                    </div>
+                </div>
+
+                
+               
+                <div class="gender">
+                    <p>GENDER</p>
+                    <div> <input type="radio" id="M" name="gender" value="M" size="10" required><label for="M">M</label></div>
+                    <div><input type="radio" id="F" name="gender" value="F"size="10" required><label for="F">F</label></div>
+                    <div class="personalinfo">
+                    <div> <label for="bday">BIRTH DATE</label><br><input type="date" id="bday" name="bday" required></div>
+                    <div> <label for="height">HEIGHT</label><br><input type="text" id="height" name="height" placeholder="Height" required></div>
+                    <div><label for="weight">WEIGHT</label><br><input type="text" id="weight" name="weight" placeholder="Weight" required></div>
+                     </div>
+                </div>
+                <p></p>
+            <hr>
+            <h3 class="applicationheader">TYPE OF APPLICATION(TOA)</h3>
+            <div class="application">
+                <div><input type="checkbox" id="NEW" name="NEW" value="NEW"><label for="NEW">NEW</label></div>
+                <div><input type="checkbox" id="DEL" name="DEL" value="DEL"><label for="DEL">DELINQUENT/DORMANT LICENSE</label>  
+                </div>
+                <div>
+                    <input type="checkbox" id="prof" name="prof" value="prof"><label for="prof">PROF TO NON-PROF</label></div>
+                <div> <input type="checkbox" id="nonprof" name="nonprof" value="nonprof"><label for="nonprof">NON-PROF TO PROF</label></div> 
+                <div><input type="checkbox" id="foreign" name="foreign" value="foreign"><label for="foreign">FOREIGN LIC.CONVERSION</label></div>
+                <div>  <input type="checkbox" id="renewal" name="renewal" value="renewal"><label for="renewal">RENEWAL</label></div>
+                <div> <input type="checkbox" id="restriction" name="restriction" value="restriction"><label for="RESTRICTION">ADDITIONAL RESTRICTION CODE</label></div>
+                <div> <input type="checkbox" id="duplication" name="duplication" value="duplication"><label for="duplication">DUPLICATION</label></div>
+                <div><input type="checkbox" id="revision" name="revision" value="revision"><label for="revision">REVISION OF RECORDS</label></div>
+               <div><input type="checkbox" id="changeadd" name="changeadd" value="changeadd"><label for="changeadd">CHANGE OF ADDRESS</label>
+               </div>
+               <div><input type="checkbox" id="civilstatus" name="civilstatus" value="v"><label for="civistatus">CHANGE CIVIL STATUS</label></div>
+               <div><input type="checkbox" id="changename" name="changename" value="changename"><label for="changename">CHANGE NAME</label>
+               </div>
+               <div><input type="checkbox" id="dateofbirth" name="dateofbirth" value="dateofbirth"><label for="dateofbirth">CHANGE DATE OF BIRTH</label></div>
+                <div> <input type="checkbox" id="others" name="others" value="others"><label for="others">OTHERS</label></div>
+            </div>
+            <p></p>
+            <hr>
+            <div class="TOA">
+                <div class="column">
+                    <h4>TYPE OF LICENSE APPLIED FOR</h4>
+                    <div><input type="radio" id="studentpermit" name="license" value="studentpermit"><label for="studentpermit">STUDENT PERMIT</label></div>
+                    <div><input type="radio" id="nonpro" name="license" value="nonpro"><label for="nonpro">NON PROFESSIONAL</label></div>
+                    <div><input type="radio" id="pro" name="license" value="pro"><label for="pro">PROFESSIONAL</label></div>
+                    <div><input type="radio" id="conductor" name="license" value="conductor"><label for="conductor">CONDUCTOR</label></div>
+                </div>
+            
+                <div class="column">
+                    <h4>DRIVING SKILL ACQUIRED</h4>
+                    <div><input type="radio" id="drivingschool" name="licenseacquire" value="drivingschool"><label for="drivingschool">DRIVING SCHOOL</label></div>
+                    <div><input type="radio" id="privateperson" name="licenseacquire" value="privateperson"><label for="privateperson">LICENSED PRIVATE PERSON</label></div>
+                </div>
+            
+                <div class="column">
+                    <h4>EDUCATIONAL ATTAINMENT</h4>
+                    <div><input type="radio" id="informalschool" name="education" value="informalschool"><label for="informalschool">INFORMAL SCHOOL</label></div>
+                    <div><input type="radio" id="elementary" name="education" value="elementary"><label for="elementary">ELEMENTARY</label></div>
+                    <div><input type="radio" id="highschool" name="education" value="pro"><label for="highschool">HIGHSCHOOL</label></div>
+                    <div><input type="radio" id="vocational" name="education" value="vocational"><label for="vocational">VOCATIONAL</label></div>
+                    <div><input type="radio" id="college" name="education" value="college"><label for="college">COLLEGE</label></div>
+                    <div><input type="radio" id="postgrad" name="education" value="postgrad"><label for="postgrad">POST GRADUATE</label></div>
+                </div>
+            </div>
+            <p></p>
+            <hr>
+               
+
+                <div class="blooddonor">
+                    <div><label for="bloodtype">BLOODTYPE</label><br><input type="text" id="bloodtype" name="bloodtype" placeholder="Bloodtype" required></div>
+                    <div></div>
+                   
+                    <div>
+                        <h5>ORGAN DONOR</h5><input type="radio" id="yes" name="organdonor" value="yes" required><label for="yes">Yes</label>
+                        <input type="radio" id="no" name="organdonor" value="no"><label for="yes">No</label></div>
+                </div>
+                <p></p>
+                <hr>
+                
+                <div class="characteristics">
+                    <!-- Column 1: Civil Status -->
+                    <div class="type">
+                        <h4>CIVIL STATUS</h4><br>
+                        <div><input type="radio" id="single" name="status" value="single"><label for="single">SINGLE</label></div>
+                        <div><input type="radio" id="married" name="status" value="married"><label for="married">MARRIED</label></div>
+                        <div><input type="radio" id="widow" name="status" value="widow"><label for="widow">WIDOW/ER</label></div>
+                        <div><input type="radio" id="separated" name="status" value="separated"><label for="separated">SEPARATED</label></div>
+                    </div>
+                
+                    <!-- Column 2: Hair -->
+                    <div class="type">
+                        <h4>HAIR</h4><br>
+                        <div><input type="radio" id="black" name="hair" value="black"><label for="black">BLACK</label></div>
+                        <div><input type="radio" id="brown" name="hair" value="brown"><label for="brown">BROWN</label></div>
+                        <div><input type="radio" id="blonde" name="hair" value="blonde"><label for="blonde">BLONDE</label></div>
+                        <div><input type="radio" id="gray" name="hair" value="gray"><label for="gray">GRAY</label></div>
+                        <div><input type="radio" id="others" name="hair" value="others"><label for="others">OTHERS(SPECIFY)</label>
+                            <label for="others"></label><br><input type="text" id="specify" name="others" placeholder="Specify"></div>
+                    </div>
+                
+                    <!-- Column 3: Eyes -->
+                    <div class="type">
+                        <h4>EYES</h4><br>
+                        <div><input type="radio" id="black" name="eyes" value="black"><label for="black">BLACK</label></div>
+                        <div><input type="radio" id="brown" name="eyes" value="brown"><label for="brown">BROWN</label></div>
+                        <div><input type="radio" id="gray" name="eyes" value="gray"><label for="gray">GRAY</label></div>
+                        <div><input type="radio" id="others" name="eyes" value="others"><label for="others">OTHERS(SPECIFY)</label>
+                            <label for="others"></label><br><input type="text" id="specify" name="others" placeholder="specify"></div>
+                    </div>
+                
+                    <!-- Column 4: Built -->
+                    <div class="type">
+                        <h4>BUILT</h4><br>
+                        <div><input type="radio" id="light" name="built" value="light"><label for="light">LIGHT</label></div>
+                        <div><input type="radio" id="medium" name="built" value="medium"><label for="medium">MEDIUM</label></div>
+                        <div><input type="radio" id="heavy" name="built" value="heavy"><label for="heavy">HEAVY</label></div>
+                    </div>
+                
+                    <!-- Column 5: Complexion -->
+                    <div class="type">
+                        <h4>COMPLEXION</h4><br>
+                        <div><input type="radio" id="light" name="complexion" value="light"><label for="light">LIGHT</label></div>
+                        <div><input type="radio" id="fair" name="complexion" value="fair"><label for="fair">FAIR</label></div>
+                        <div><input type="radio" id="dark" name="complexion" value="dark"><label for="dark">DARK</label></div>
+                    </div>
+                </div>
+                <p></p>
+                <hr>    
+                <h3>BIRTHPLACE</h3>
+                <div class="birthplace">
+                    <div> <label for="BIRTHPLACE"></label><br>
+                        <input type="text" id="birthplace" name="birthplace" class="addresstext" placeholder="Full address" required></div>
+                </div>
+
+                <div class="container">
+                <h3>FATHER'S NAME(INDICATE EVEN IF DECEASED)</h3>
+                <div class="row">
+                  
+                    <div> <label for="fatherlast">LASTNAME</label><br>
+                    <input type="text" id="fatherlast" name="fatherlast" placeholder="Firstname" required></div>
+                    
+                    <div><label for="fatherfirst">FIRSTNAME</label><br>
+                     <input type="text" id="fatherfirst" name="fatherfirst" placeholder="Firstname" required></div>
+
+                     <div>
+                        <label for="fathermiddle">MIDDLENAME</label><br>
+                        <input type="text" id="fathermiddle" name="fathermiddle" placeholder="Middlename" required>
+                     </div>
+                </div>
+
+                <h3>MOTHER'S NAME(INDICATE EVEN IF DECEASED)</h3>
+                <div class="row">
+                    <div> <label for="motherlast">LASTNAME</label><br>
+                    <input type="text" id="motherlast" name="motherlast" placeholder="Lastname" required></div>
+                    
+                    <div><label for="motherfirst">FIRSTNAME</label><br>
+                     <input type="text" id="motherfirst" name="motherfirst" placeholder="Firstname" required></div>
+
+                     <div>
+                        <label for="mothermiddle">MIDDLENAME</label><br>
+                        <input type="text" id="mothermiddle" name="mothermiddle" placeholder="Middlename" required>
+                     </div>
+                </div>
+
+                <h3>SPOUSE NAME(INDICATE EVEN IF DECEASED)</h3>
+                <div class="row">
+                    <div> <label for="spouselast">LASTNAME</label><br>
+                    <input type="text" id="spouselast" name="spouselast" placeholder="Lastname" required></div>
+                    <div><label for="spousefirst">FIRSTNAME</label><br>
+                     <input type="text" id="spousefirst" name="spousefirst" placeholder="Firstname" required></div>
+                     <div>
+                        <label for="spousemiddle">MIDDLENAME</label><br>
+                        <input type="text" id="spousemiddle" name="spousemiddle" placeholder="Middlename" required >
+                     </div>
+                </div>
+            </div>
+
+            <h3>EMPLOYERS BUSINESS NAME</h3>
+            <div class="businessname">
+                <div><label for="businessname">BUSINESS NAME</label><br>
+                    <input  type="text" id="businessname" name="businessname" placeholder="Business name" required ></div>
+              <div><label for="buscont">TEL NO. / CP NO.:</label> <br>
+             <input type="tel" id="buscont" name="buscont" placeholder="Enter Contact" required> </div>
+            </div>
+
+            <div>
+                <h3>EMPLOYER'S BUSINESS ADDRESS</h3>
+                <label for="businessadd"></label><br>
+                <input type="text" id="businessadd" name="businessadd" class="businesstext" placeholder="Address" required ></div>
+                <div></div>
+            </div>
+
+            <h3>FILL THIS UP ONLY IF YOUR NAME ABOVE IS DIFFERENTFROM YOUR NAME IN PREVIOUS LICENSE</h3>
+            <div class="container">
+                <div class="row">
+                    <div>
+                        <label for="Lastnameprev">LASTNAME</label><br>
+                        <input type="text" id="Lastnameprev" name="Lastnameprev" placeholder="Lastname" required>
+                    </div>
+                    <div>
+                        <label for="Firstnameprev">FIRSTNAME</label><br>
+                        <input type="text" id="Firstnameprev" name="Firstnameprev" placeholder="Firstname" required>
+                    </div>
+                    <div>
+                        <label for="Middlenameprev">MIDDLENAME</label><br>
+                        <input type="text" id="Middlenameprev" name="Middlenameprev" placeholder="Middlename" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="signaturecert">
+                <h4>THIS IS TO CERTIFY THAT  THE INFORMATION I HAVEGIVEN IS TRUE AND CORRECT.</h4>
+                <div>
+                <label for="signaturecert"></label><br>
+                 <input type="text" id="signaturecert" name="signaturecert" class="signature" placeholder="SIGNATURE HERE" required>
+                 </div>
+            </div>
+            </form>
+        </section>
+       </form>
+        </section>
+        <script>
+            // Define an object that maps cities to their respective places
+            var cityPlaces = {
+                "NCR": ["CALOOCAN SOUTH", "CALOOCAN NORTH","LAS PINAS","MAKATI","MALABON", "MANDALUYONG","MANILA","MARIKINA","MUNTINLUPA","NAVOTAS","PARANAQUE","PASAY"
+                ,"PASIG","PATEROS","QUEZON CITY","SAN JUAN","TAGUIG","VALENZUELA"],
+
+                "RIZAL": ["ANTIPOLO", "BINANGONAN", "RODRIGUEZ", "JALA-JALA", "TANAY", "PASIG", "SANTO DOMINGO", "MORONG", "TAYTAY", "PILILLA", "ANGONO", "CARDONA", "RIZAL", "MARIKINA", "SAN MATEO", "CAINTA", "BARAS", "TERESA"],
+
+                "CAVITE": ["CAVITE CITY", "KAWIT","NOVELOTA","ROSARIO","BACOOR", "IMUS","DASMARINAS","CARMONA","SILANG","GENERAL MARIANO ALVAREZ","GENERAL TRIAS","AMADEO","INDANG","TANZA","TRECE MARTIRES CITY","TAGAYTAY CITY","ALFONSO","GENERAL EMILIO AGUINALDO","MAGALLANES","MENDEZ","MARAGONDON","MENDEZ","NAIC","TERNATE"],
+
+                "LAGUNA": ["CALAMBA", "LUISIANA","BAY","LUMBAN","ALAMINOS", "SAN PABLO","PILA","CAVINTI","MABITAC","LOS BANOS","SANTA ROSA","BINAN"
+                ,"PANGIL","NAGCARLAN","FAMY","SAN PEDRO","KALAYAAN","CABUYAO","CALAUAN","VICTORIA","PAGSANJAN","RIZAL","MAJAYJAY","SANTA CRUZ","LILIW","PAETE","SINILOAN","PAKIL","MAGDALENA","SANTA MARIA","CANLUBANG","KAY-ANLOG, CALAMBA","PUNTA","TURBINA","MAKILING","PARIAN","SANTO ANGEL","DEL REMEDIO","BANILAN","MALITLIT","MAMATID","REAL"],
+
+                "QUEZON": ["AGDANGAN", "ALABAT","BUENAVISTA","BURDEOS","CALAUAG","CANDELARIA", "CATANAUAN","DOLORES","GENERAL LUNA","GENERAL NAKAR","GUINAYANGAN","GUMACA","INFANTA","JOMALIG","LOPEZ","LUCBAN","MACALELON","MAUBAN","MULANAY","PADRE BURGOS","PAGBILAO","PANUKULAN","PATNANUNGAN","PEREZ","PITOGO","PLARIDEL","POLILO","QUEZON","REAL","SAMPALOC"," SAN ANDRES","SAN ANTONIO","SAN FRANCISCO","SAN NARCISO","SARIAYA","TAGKAWAYAN","TIAONG","UNISAN"],
+                
+                "BATANGAS": ["AGONCILLO", "ALITAGTAG","BALAYAN","BALETE","BATANGAS","BAUAN", "CALACA","CALATAGAN","CUENCA","IBAAN","LAUREL","LEMERY","LIAN","LIPA","LOBO","MABINI","MALVAR","MATAASNAKAHOY","NASUGBU","PADRE GARCIA","ROSARIO","SAN JOSE","SAN LUIS","SAN NICOLAS","SAN PASCUAL","SANTA TERESITA","SANTO TOMAS","TAAL","TALISAY","TANAUAN","TAYSAN","TINGLOY","TUY"] 
+            };
+
+    
+            function showPlacesDropdown() {
+                var proviceDropdown = document.getElementById("province-dropdown");
+                var cityDropdown = document.getElementById("province-dropdown");
+                var placeSelect = document.getElementById("place-select");
+                var selectedCity = cityDropdown.value;
+    
+                // Clear the current options in the place dropdown
+                placeSelect.innerHTML = '<option value="">SELECT A CITY</option>';
+    
+                // If a city is selected, populate the place dropdown with the places for that city
+                if (selectedCity !== "") {
+                    var places = cityPlaces[selectedCity];
+                    for (var i = 0; i < places.length; i++) {
+                        var option = document.createElement("option");
+                        option.value = places[i];
+                        option.textContent = places[i];
+                        placeSelect.appendChild(option);
+                    }
+                    placesDropdown.style.display = "block";
+                } else {
+                    placesDropdown.style.display = "none";
+                }
+            }
+        </script>
+    </body>
+</html>
